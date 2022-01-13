@@ -94,10 +94,9 @@ def main(user, domain, data):
                 a, b = st.columns(columns_split)
                 a.markdown(f'**{d["title"]}**')
                 a.caption(d['content'][:300].replace('\n','. ')+'...')
-                a.write('')
-                a.write('')
                 relevant[d['index']] = b.radio(label='Score:', index=3, key=f'C{i}', 
                     options=['Very Relevant!', 'Somewhat Relevant.', 'Somewhat Irrelevant.', 'Very Irrelevant!'])
+                b.write('')
                 
         submitted = st.form_submit_button('Submit', on_click=send, kwargs=dict(user=user, relevant=relevant, interesting=None))
     return submitted
