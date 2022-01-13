@@ -63,7 +63,7 @@ def main(user, domain, data):
 
     st.markdown(f'### Recommender Engine Validation Exercise for {domain}')
 
-    styler = 'margin-block-start:0px;margin-block-end:11px;'
+    styler = 'margin-block-start:0px;margin-block-end:11px; width:80%; min-width:400px'
     welcome = [
         (f'<p style="{styler}">Welcome! Thank you for taking the time to help us with this experiment.</p>'),
         (f'<p style="{styler}">We have compiled 30 random pieces of news from Atium, some of which were '
@@ -80,7 +80,7 @@ def main(user, domain, data):
     with st.container():
         st.markdown(''.join(welcome), unsafe_allow_html=True)
 
-    columns_split = [0.2, 5,0.2,2,0.6]
+    columns_split = [0.3, 5,0.2,2,0.4]
     with st.form('myform'):
         # st.form_submit_button('Submit',
         #     on_click=onclick, 
