@@ -32,7 +32,7 @@ def challenge():
     
     if submitted:
         if pwd in user2domain:
-            a, b, c = st.columns(1,10,5)
+            a, b, c = st.columns([1,10,5])
             with b:
                 main(pwd, user2domain[pwd], data[user2domain[pwd]])
         else:
