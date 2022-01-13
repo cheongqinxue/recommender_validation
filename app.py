@@ -80,13 +80,13 @@ def main(user, domain, data):
     with st.container():
         st.markdown(''.join(welcome), unsafe_allow_html=True)
 
-    columns_split = [4,1]
+    columns_split = [5,2,1]
     with st.form('myform'):
         # st.form_submit_button('Submit',
         #     on_click=onclick, 
         #     kwargs=dict(relevant=relevant, interesting=interesting))
 
-        c1, c2 = st.columns(columns_split)
+        c1, c2, c3 = st.columns(columns_split)
         c1.markdown('##### News Pieces')
 
         for i, d in enumerate(data):
