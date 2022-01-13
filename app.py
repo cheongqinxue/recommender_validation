@@ -63,7 +63,7 @@ def main(user, domain, data):
 
     st.markdown(f'### Recommender Engine Validation Exercise for {domain}')
 
-    styler = 'margin-block-start:0px;margin-block-end:11px; width:80%; min-width:400px; max-width: 700px'
+    styler = 'margin-block-start:0px;margin-block-end:11px; padding-left:37.974684% width:80%; min-width:400px; max-width: 700px'
     welcome = [
         (f'<p style="{styler}">Welcome! Thank you for taking the time to help us with this experiment.</p>'),
         (f'<p style="{styler}">We have compiled 30 random pieces of news from Atium, some of which were '
@@ -72,7 +72,7 @@ def main(user, domain, data):
         (f'<p style="{styler}">We would like your help to indicate which are relevant to your work and '
         'which ones seem interesting to you. Kindly use the checkboxes'
         ' to the right to indicate your choices and hit the submit button at the '
-        'bottom of the page. You may hit submit multiple times and we will only use'
+        'bottom of the page. You may hit submit multiple times and we will only use '
         'your latest submission.</p>'),
         '<p style="border-bottom: 1px solid grey">Kindly submit by <b>31 Jan 2022</b> please!</p>'
     ]
