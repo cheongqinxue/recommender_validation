@@ -98,6 +98,9 @@ def main(user, domain, data):
                     options=['Very Relevant!', 'Somewhat Relevant.', 'Somewhat Irrelevant.', 'Very Irrelevant!'])
                 b.write('')
                 b.write('')
+                b.write('')
+                b.write('')
+                
                 
                 
         submitted = st.form_submit_button('Submit', on_click=send, kwargs=dict(user=user, relevant=relevant, interesting=None))
