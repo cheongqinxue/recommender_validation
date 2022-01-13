@@ -80,7 +80,7 @@ def main(user, domain, data):
     with st.container():
         st.markdown(''.join(welcome), unsafe_allow_html=True)
 
-    columns_split = [0.2, 5,0.2,2,1]
+    columns_split = [0.2, 5,0.2,2,0.6]
     with st.form('myform'):
         # st.form_submit_button('Submit',
         #     on_click=onclick, 
