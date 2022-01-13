@@ -28,7 +28,7 @@ def challenge():
     data = copy.deepcopy(data_)
     with st.sidebar.container():
         pwd = st.text_input(label='Enter User ID')
-        submitted = st.button("Submit")
+        submitted = st.button("Click to Begin")
     
     if submitted or pwd != '':
         if pwd in user2domain:
