@@ -80,18 +80,18 @@ def main(user, domain, data):
     with st.container():
         st.markdown(''.join(welcome), unsafe_allow_html=True)
 
-    columns_split = [5,0.2,2,1]
+    columns_split = [0.2, 5,0.2,2,1]
     with st.form('myform'):
         # st.form_submit_button('Submit',
         #     on_click=onclick, 
         #     kwargs=dict(relevant=relevant, interesting=interesting))
 
-        c1, c2, c3, c4 = st.columns(columns_split)
+        _, c1, c2, c3, c4 = st.columns(columns_split)
         c1.markdown('##### News Pieces')
 
         for i, d in enumerate(data):
             with st.container():
-                a, c, b, _ = st.columns(columns_split)
+                _, a, c, b, _ = st.columns(columns_split)
                 a.markdown(f'**{d["title"]}**')
                 a.caption(d['content'][:300].replace('\n','. ')+'...')
                 relevant[d['index']] = b.radio(label='How relevant is this?', index=3, key=f'C{i}', 
