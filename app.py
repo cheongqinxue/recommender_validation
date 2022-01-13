@@ -63,7 +63,7 @@ def main(user, domain, data):
 
     st.markdown(f'### Recommender Engine Validation Exercise for {domain}')
 
-    styler = 'margin-block-start:0px;margin-block-end:11px; width:80%; min-width:400px'
+    styler = 'margin-block-start:0px;margin-block-end:11px; width:80%; min-width:400px, max-width: 600px'
     welcome = [
         (f'<p style="{styler}">Welcome! Thank you for taking the time to help us with this experiment.</p>'),
         (f'<p style="{styler}">We have compiled 30 random pieces of news from Atium, some of which were '
