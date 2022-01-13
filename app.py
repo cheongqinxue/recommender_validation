@@ -91,7 +91,7 @@ def main(user, domain, data):
 
         for i, d in enumerate(data):
             with st.container():
-                a, c, b, d = st.columns(columns_split)
+                a, c, b, _ = st.columns(columns_split)
                 a.markdown(f'**{d["title"]}**')
                 a.caption(d['content'][:300].replace('\n','. ')+'...')
                 relevant[d['index']] = b.radio(label='How relevant is this?', index=3, key=f'C{i}', 
