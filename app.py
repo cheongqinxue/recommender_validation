@@ -96,7 +96,7 @@ def main(user, domain, data):
                 a.caption(d['content'][:300].replace('\n','. ')+'...')
                 a.write('')
                 a.write('')
-                relevant[d['index']] = b.radio(label='Score:', key=f'C{i}', options=['Irrelevant', 'Somewhat Relevant', 'Interesting'])
+                relevant[d['index']] = b.radio(label='Score:', key=f'C{i}', options=['Totally Irrelevant', 'Somewhat Irrelevant', 'Somewhat Relevant', 'Interesting'])
                 
         submitted = st.form_submit_button('Submit', on_click=send, kwargs=dict(user=user, relevant=relevant, interesting=None))
     return submitted
