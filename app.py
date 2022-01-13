@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(layout='centered')
+st.set_page_config(layout='wide')
 import json
 import s3fs
 import random
@@ -32,7 +32,9 @@ def challenge():
     
     if submitted:
         if pwd in user2domain:
-            main(pwd, user2domain[pwd], data[user2domain[pwd]])
+            a, b, c = st.columns(1,10,5)
+            with b:
+                main(pwd, user2domain[pwd], data[user2domain[pwd]])
         else:
             st.error('Wrong password')
             st.stop()
