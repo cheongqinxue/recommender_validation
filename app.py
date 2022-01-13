@@ -94,7 +94,7 @@ def main(user, domain, data):
                 a, b = st.columns(columns_split)
                 a.markdown(f'**{d["title"]}**')
                 a.caption(d['content'][:300].replace('\n','. ')+'...')
-                relevant[d['index']] = b.radio(label='Score:', index=3, key=f'C{i}', 
+                relevant[d['index']] = b.radio(label=None, index=3, key=f'C{i}', 
                     options=['Very Relevant!', 'Somewhat Relevant.', 'Somewhat Irrelevant.', 'Very Irrelevant!'])
                 b.write('')
                 b.write('')
