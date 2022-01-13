@@ -27,10 +27,10 @@ def challenge():
     user2domain, data_ = load(st.secrets['CONFIGPATH'], st.secrets['TESTDATAPATH'])
     data = copy.deepcopy(data_)
     with st.sidebar.container():
-        pwd = st.text_input(label='Enter Password')
+        pwd = st.text_input(label='Enter User ID')
         submitted = st.button("Submit")
     
-    if submitted:
+    if submitted or pwd != '':
         if pwd in user2domain:
             main(pwd, user2domain[pwd], data[user2domain[pwd]])
         else:
