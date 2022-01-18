@@ -6,7 +6,7 @@ import random
 import copy
 FS = s3fs.S3FileSystem(anon=False)
 import gspread
-import datetime
+from datetime import datetime
 import pytz
 
 @st.cache
