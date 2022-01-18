@@ -6,6 +6,8 @@ import random
 import copy
 FS = s3fs.S3FileSystem(anon=False)
 import gspread
+import datetime
+import pytz
 
 @st.cache
 def load(configpath, testdatapath):
@@ -45,6 +47,7 @@ def send(user, relevant, interesting=None):
     row_to_update = int(ws.cell(2,1).value)+2
     ws.update_cell(row_to_update,2,user)
     ws.update_cell(row_to_update,3,package)
+    ws.update_cell(row_to_update,4,datetime.utcnow().replace(tzinfo=pytz.timezone('Asia/Singapore')).strftime('%Y-%m-%d %H:%M:%S'))
     st.balloons()
     st.success('Thank you!')
 
